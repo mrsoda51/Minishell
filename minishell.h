@@ -3,19 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsimoran <rsimoran@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 20:28:09 by rsimoran          #+#    #+#             */
-/*   Updated: 2024/09/02 20:29:32 by rsimoran         ###   ########.fr       */
+/*   Updated: 2024/09/17 10:40:45 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINISHELL_H
 # define MINISHELL_H
 
-# include "../library/libft/libft.h"
+# include "../libft/inc/libft.h"
 # include <errno.h>
 # include <fcntl.h>
+# include <limits.h>
+# include <stdbool.h>
 # include <signal.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -203,12 +205,6 @@ char					*ft_find_path(t_minishell_data *mini, char *arg, int i);
 char					*ft_trim_path(char *path);
 char					*ft_create_path(char *path, char *command);
 
-// pwd
-void					ft_pwd(t_minishell_data *mini);
-
-// env
-void					ft_env(t_minishell_data *mini);
-
 //	utils
 void					error_print_one_message(char *message, int c,
 							t_minishell_data *mini);
@@ -221,6 +217,12 @@ int						ft_lstsize_commands(t_ast *lst);
 void					stop(char *message);
 int						ft_getenv_set(char **envp, char *to_get);
 void					error_print(char *s, t_minishell_data *mini);
+
+// builtins
+int						check_n(char *args);
+void					ft_echo(char **input, t_minishell_data *mini_data);
+void					ft_env(char **input, t_minishell_data *mini_data);
+void					ft_pwd(char **cmd, t_minishell_data *mini_data);
 
 
 #endif
