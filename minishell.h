@@ -6,7 +6,7 @@
 /*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 20:28:09 by rsimoran          #+#    #+#             */
-/*   Updated: 2024/09/17 10:40:45 by ahusic           ###   ########.fr       */
+/*   Updated: 2024/09/18 14:26:25 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,17 @@ typedef enum s_type
 	ENV_VAR = '$',
 }						t_type;
 
+typedef enum e_error_type
+{
+	E_SYNTAX,
+	E_CMD,
+	E_PERMISSION,
+	E_EXPORT,
+	E_ALLOC,
+	E_UNSET,
+	E_EXIT,
+	E_CD,
+}						t_error_type;
 typedef enum s_error_cod
 {
 	ERR_SYNTX_COD = 258,
@@ -94,6 +105,7 @@ typedef struct s_mini_data
 	int					**fds;
 	char				**envp;
 	int					exit_cd;
+	int					exit_status;
 	t_token				*tokens;
 	t_ast				*cmds;
 	int					out_fd;
@@ -223,7 +235,16 @@ int						check_n(char *args);
 void					ft_echo(char **input, t_minishell_data *mini_data);
 void					ft_env(char **input, t_minishell_data *mini_data);
 void					ft_pwd(char **cmd, t_minishell_data *mini_data);
+int						cd_path(char *old_path, char *new_path,
+							t_minishell_data *mini_data);
 
+
+// error handling
+void					error(t_error_type type, char *input);
+void					builtin_error_msg(t_error_type error_type,
+							char *error_msg);
+void					redir_msg(char *file, t_minishell_data *mini_data,
+							int exit_cd);
 
 #endif
 
