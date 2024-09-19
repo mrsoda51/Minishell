@@ -6,7 +6,7 @@
 /*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 14:05:29 by ahusic            #+#    #+#             */
-/*   Updated: 2024/09/18 14:28:32 by ahusic           ###   ########.fr       */
+/*   Updated: 2024/09/19 11:45:11 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ void	free_exit(char *msg, t_minishell_data *mini_data, char *exit_status)
 	ft_exit(exit_status, mini_data);
 }
 
-void	close_exit(int *fd, char *msg, t_minishell_data *mini_data, char *exit_status)
+void	close_exit(int *fd, char *msg, t_minishell_data *mini_data,
+				char *exit_status)
 {
 	close(fd[0]);
 	close(fd[1]);

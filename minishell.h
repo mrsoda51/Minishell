@@ -6,7 +6,7 @@
 /*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 20:28:09 by rsimoran          #+#    #+#             */
-/*   Updated: 2024/09/18 14:26:25 by ahusic           ###   ########.fr       */
+/*   Updated: 2024/09/19 11:44:20 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -245,6 +245,10 @@ void					builtin_error_msg(t_error_type error_type,
 							char *error_msg);
 void					redir_msg(char *file, t_minishell_data *mini_data,
 							int exit_cd);
+void					free_exit(char *msg, t_minishell_data *mini_data,
+							char *exit_status);
+void					close_exit(int *fd, char *msg,
+							t_minishell_data *mini_data, char *exit_status);
 
 #endif
 
