@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ast_parse.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsimoran <rsimoran@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 20:21:07 by rsimoran          #+#    #+#             */
-/*   Updated: 2024/09/02 20:22:40 by rsimoran         ###   ########.fr       */
+/*   Updated: 2024/09/20 14:00:35 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "../minishell.h"
 
 int	is_ok_parsing(t_minishell_data *mini_dto)
 {

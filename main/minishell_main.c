@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   minishell_main.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsimoran <rsimoran@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 20:26:16 by rsimoran          #+#    #+#             */
-/*   Updated: 2024/09/02 20:26:18 by rsimoran         ###   ########.fr       */
+/*   Updated: 2024/09/20 13:59:24 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "../minishell.h"
 #include "math.h"
 
 int	g_global_sig = 0;

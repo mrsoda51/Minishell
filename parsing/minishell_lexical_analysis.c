@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   minishell_lexical_analysis.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsimoran <rsimoran@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 20:24:49 by rsimoran          #+#    #+#             */
-/*   Updated: 2024/09/02 20:24:50 by rsimoran         ###   ########.fr       */
+/*   Updated: 2024/09/20 14:01:09 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "../minishell.h"
 
 int	passed_lexical_analysis(t_minishell_data *mini_dto)
 {

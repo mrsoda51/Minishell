@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   cmds_handler.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsimoran <rsimoran@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 20:23:51 by rsimoran          #+#    #+#             */
-/*   Updated: 2024/09/02 20:24:02 by rsimoran         ###   ########.fr       */
+/*   Updated: 2024/09/20 14:01:05 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "../minishell.h"
 
 int	passed_ast_cmds_generation(t_minishell_data *mini_dto)
 {

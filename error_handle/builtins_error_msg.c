@@ -6,7 +6,7 @@
 /*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:27:29 by ahusic            #+#    #+#             */
-/*   Updated: 2024/09/18 14:04:19 by ahusic           ###   ########.fr       */
+/*   Updated: 2024/09/20 14:02:16 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	builtin_error_msg(t_error_type error_type, char *error_msg)
 	if (error_type == E_EXPORT)
 	{
 		ft_putstr_fd("export: not a valid identifier: ", 2);
-		ft_putendl_ft(error_msg, 2);
+		ft_putendl_fd(error_msg, 2);
 	}
 	if (error_type == E_UNSET)
 	{

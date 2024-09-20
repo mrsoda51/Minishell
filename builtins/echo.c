@@ -6,11 +6,11 @@
 /*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 18:51:12 by ahusic            #+#    #+#             */
-/*   Updated: 2024/09/13 12:52:55 by ahusic           ###   ########.fr       */
+/*   Updated: 2024/09/20 13:55:14 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "../minishell.h"
 
 int	check_n(char *args)
 {

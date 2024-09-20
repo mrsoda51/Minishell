@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   minishell_redirections.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsimoran <rsimoran@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 20:24:57 by rsimoran          #+#    #+#             */
-/*   Updated: 2024/09/02 20:25:00 by rsimoran         ###   ########.fr       */
+/*   Updated: 2024/09/20 14:01:17 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "../minishell.h"
 
 int	passed_redirections_process(t_minishell_data *mini_dto)
 {

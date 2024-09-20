@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   minishell_terminal.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsimoran <rsimoran@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 20:25:35 by rsimoran          #+#    #+#             */
-/*   Updated: 2024/09/02 20:25:37 by rsimoran         ###   ########.fr       */
+/*   Updated: 2024/09/20 13:59:30 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "../minishell.h"
 
 void	error_print(char *s, t_minishell_data *mini)
 {
@@ -53,7 +53,7 @@ void	init_terminal(t_minishell_data *mini_dto)
 			we have pepare env for executation
 			*/
 		}
-			
+
 	}
 	return (0);
 }
