@@ -6,7 +6,7 @@
 /*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 20:26:04 by rsimoran          #+#    #+#             */
-/*   Updated: 2024/09/20 14:01:41 by ahusic           ###   ########.fr       */
+/*   Updated: 2024/09/24 16:23:44 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	init_mini_data(t_minishell_data *mini_dto, char *envp[])
 {
-
 	mini_dto->exit_cd = 0;
 	mini_dto->out_fd = STDOUT_FILENO;
 	mini_dto->in_fd = STDIN_FILENO;

@@ -6,7 +6,7 @@
 #    By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/19 10:02:13 by ahusic            #+#    #+#              #
-#    Updated: 2024/09/20 14:06:18 by ahusic           ###   ########.fr        #
+#    Updated: 2024/09/24 16:51:40 by ahusic           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,10 @@ MAINDIR = $(BINDIR)/main
 SRCS =		builtins/cd.c \
 			builtins/echo.c \
 			builtins/env_pwd.c \
+			builtins/exit.c \
+			builtins/export.c \
 			env/utils.c \
+			env/utils2.c \
 			error_handle/builtins_error_msg.c \
 			error_handle/error.c \
 			error_handle/free_close_exit.c \

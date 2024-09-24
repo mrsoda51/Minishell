@@ -6,7 +6,7 @@
 /*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 20:25:35 by rsimoran          #+#    #+#             */
-/*   Updated: 2024/09/20 13:59:30 by ahusic           ###   ########.fr       */
+/*   Updated: 2024/09/24 16:23:33 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ void	init_terminal(t_minishell_data *mini_dto)
 			we have pepare env for executation
 			*/
 		}
-
 	}
 	return (0);
 }

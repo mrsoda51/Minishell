@@ -6,7 +6,7 @@
 /*   By: ahusic <ahusic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 13:03:41 by ahusic            #+#    #+#             */
-/*   Updated: 2024/09/20 14:05:04 by ahusic           ###   ########.fr       */
+/*   Updated: 2024/09/24 18:00:32 by ahusic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,31 +150,37 @@ void					ft_echo(char **input, t_minishell_data *mini_data);
 void					ft_env(char **input, t_minishell_data *mini_data);
 void					ft_pwd(char **cmd, t_minishell_data *mini_data);
 void					ft_exit(char *input, t_minishell_data *mini_data);
+void					ft_export(char **input, t_minishell_data *mini_data);
+void					ft_unset(char **input, t_minishell_data *mini_data);
 
-// environment
+// environment utils
 int						env_index(char *type, char **env);
 void					existing_env_update(char *temp, char *value,
 							t_minishell_data *mini_data, int index);
 void					new_env_update(char *temp, char *value,
 							t_minishell_data *mini_data, int env_count);
-void					env_update(char *type, char *value, t_minishell_data *mini_data);
+void					env_update(char *type,
+							char *value, t_minishell_data *mini_data);
 char					*get_env(char **env, char *type);
+char					**new_env(char **envp, char *new);
+char					**sort_new(char **envp);
+char					*put_quotes(char *envp);
 
 // error handling
-void					builtin_error_msg(t_error_type error_type, char *error_msg);
-void					redir_msg(char *file, t_minishell_data *mini_data, int exit_cd);
+void					builtin_error_msg(t_error_type error_type,
+							char *error_msg);
+void					redir_msg(char *file, t_minishell_data *mini_data,
+							int exit_cd);
 void					error(t_error_type type, char *input);
-void					free_exit(char *msg, t_minishell_data *mini_data, char *exit_status);
-void					close_exit(int *fd, char *msg, t_minishell_data *mini_data, char *exit_status);
+void					free_exit(char *msg, t_minishell_data *mini_data,
+							char *exit_status);
+void					close_exit(int *fd, char *msg,
+							t_minishell_data *mini_data, char *exit_status);
 void					free_array(char **array);
 void					free_tokenlist(t_token **token_list);
 void					free_tree(t_tree *tree);
 void					free_binary(t_tree *tree);
 void					free_mini_data(t_minishell_data *mini_data);
-
-// exit
-// int						is_digit(char *str);
-// long long				ft_atoll(const char *str, bool *error);
 
 // parsing
 int						is_ok_parsing(t_minishell_data *mini_dto);
@@ -183,28 +189,35 @@ char					*get_env_value(char **envp, char *env_var);
 int						file_type_check(char *path);
 int						file_permission_check(char *path);
 int						passed_ast_cmds_generation(t_minishell_data *mini_dto);
-int						add_new_node_to_ast(t_token **tokens, t_ast **cmds_head);
+int						add_new_node_to_ast(t_token **tokens,
+							t_ast **cmds_head);
 void					init_new_ast_node(t_ast **cmd);
 int						init_args(t_token **tokens, t_ast **cmds_head);
-int						create_2d_args_null_term(t_token **tokens, t_ast **cmds_head, int i);
+int						create_2d_args_null_term(t_token **tokens,
+							t_ast **cmds_head, int i);
 int						passed_expansion_process(t_minishell_data *mini_dto);
-int						is_needed_expansion(t_minishell_data *mini_dto, char **args, int *flag_rf);
-char					*expansion_process_succeeded(t_minishell_data *mini_dto, char *arg,
-						char **to_expand, int *flag_rf);
-char					*process_single_quotes(char *arg, int *i, char **to_expand);
+int						is_needed_expansion(t_minishell_data *mini_dto,
+							char **args, int *flag_rf);
+char					*expansion_process_succeeded(t_minishell_data *mini_dto,
+							char *arg, char **to_expand, int *flag_rf);
+char					*process_single_quotes(char *arg, int *i,
+							char **to_expand);
 char					*ft_strncat(char *s1, char *s2, int n);
 int						passed_lexical_analysis(t_minishell_data *mini_dto);
 void					init_lexer_dto(t_lexer_data *lexer_dto, char *str);
 int						passed_redirections_process(t_minishell_data *mini_dto);
 int						manage_out_append_to_file(t_ast *head_cmds, int *i);
-int						manage_heredoc_in_from_file(t_ast *head_cmds, t_minishell_data *mini_dto, int *i);
+int						manage_heredoc_in_from_file(t_ast *head_cmds,
+							t_minishell_data *mini_dto, int *i);
 void					unshift_n_element(char **args, int *pos, int n);
-int						manage_heredoc(int fd, char *delimiter, t_minishell_data *mini_dto, int j);
+int						manage_heredoc(int fd, char *delimiter,
+							t_minishell_data *mini_dto, int j);
 int						passed_syntactical_analysis(t_minishell_data *mini_dto);
 int						passed_pipe_errors(t_token *token);
 int						passed_rediriection_error(t_token *token);
 t_token					*get_next_token(t_lexer_data *l_dto);
-t_token					*create_token(t_type type, char *val, t_token *next, t_token *prev);
+t_token					*create_token(t_type type, char *val,
+							t_token *next, t_token *prev);
 t_token					*get_token_word(t_lexer_data *lexer_dto);
 void					manage_quotes(t_lexer_data *lexer_dto);
 void					free_token_list(t_token *tokens);
